@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dynamic click ripple animation
     createRipple(e);
+
+    // Track button click event on TikTok Pixel
+    if (window.ttq && typeof window.ttq.track === 'function') {
+      window.ttq.track('ClickButton');
+      window.ttq.track('Subscribe');
+    }
   });
 
   // Hover background glow intensification
